@@ -9,18 +9,13 @@
 	$hostname = $mysql_config["hostname"];
 	$port = $mysql_config["port"];
 	$dbname = $mysql_config["name"];
-	$link = mysqli_connect("$hostname:$port", $username, $password);
-	$db_selected = mysql_select_db($dbname, $link);
+	$link = mysqli_connect("$hostname", $username, $password);
+	$db_selected = mysql_select_db("leads", $link);
 	if (mysqli_connect_errno($link)) {
- 		print "Failed to connect to MySQL: " . mysqli_connect_error();
+ 		print "Error";
  		die();
  	}
-	// mysql_query("INSERT INTO leads (fname, lname, email) VALUES ('") . $fname . "', '" . $lname . "', '" . $email . "')");
+	mysql_query("INSERT INTO leads (fname, lname, email) VALUES ('") . $fname . "', '" . $lname . "', '" . $email . "')");
 	mysqli_close($link);
-	$returnArray = array(
-		'fname' => $fname
-	);
-	print(json_encode($returnArray));
-	// print $_POST["fname"];
-	print "Error";
+	print $_POST["fname"];
 ?>

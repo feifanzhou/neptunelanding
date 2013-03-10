@@ -84,11 +84,11 @@
 		<div class="span5 FeatureBlock">
 			<div class="Feature">
 				<h2>Discover incredible new music</h2>
-				<p>nepTune fosters an artistic environment where artists are free to explore creative ideas and create amazing music. This means that you get to pure creativity, not an autotuned, mass-produced mess.</p>
+				<p>nepTune fosters an artistic environment where artists are free to explore creative ideas and create great music. This means that you get pure creativity, not an autotuned, mass-produced mess.</p>
 			</div>
 			<div class="Feature">
 				<h2>Sounds from around the world</h2>
-				<p>nepTune uses the freedom of the internet to bring music around the world. Whether you like African pop or the traditional sounds of Southeast Asia, nepTune brings all of those sounds together in one place for your listening pleasure.</p>
+				<p>nepTune uses the freedom of the internet to spread music around the world. Whether you like African pop or the traditional sounds of Southeast Asia, nepTune brings all of those sounds together in one place for your listening pleasure.</p>
 			</div>
 			<div class="Feature">
 				<h2>Simple, clean, controllable sharing</h2>
@@ -108,7 +108,7 @@
 	</div>
 	<footer id="signup">
 		<div id="footerForm">
-			<p>Stay up to date:</p>
+			<p>Stay tuned:</p>
 			<form method="POST" action="useremailsignup.php">
 				<input type="text" name="fname" id="fname" placeholder="First name" />
 				<label for="fname">First name</label>
