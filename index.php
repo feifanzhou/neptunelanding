@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/mainstyles.css" type="text/css" />
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src
 	<script type="text/javascript">
 		$(document).ready(function() {	// Load Retina images
 			if (window.devicePixelRatio > 1.5) {
@@ -104,9 +105,9 @@
 		<div id="footerForm">
 			<p>Stay up to date:</p>
 			<form>
-				<input type="text" placeholder="First name" />
-				<input type="text" placeholder="Last name" />
-				<input type="email" placeholder="Email" />
+				<input type="text" placeholder="First name" id="fname" />
+				<input type="text" placeholder="Last name" id="lname" />
+				<input type="email" placeholder="Email" id="email" />
 				<div class="btn" id="signupButton" onclick="signup()" ><span>Sign up!</span></div>
 			</form>
 			<div id="feedbackButtons">
