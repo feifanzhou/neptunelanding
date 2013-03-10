@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/mainstyles.css" type="text/css" />
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src
+	<script src="js/mainscripts.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {	// Load Retina images
 			if (window.devicePixelRatio > 1.5) {
@@ -18,6 +18,11 @@
 				});
 			}
 		});
+		$(document).ready(function() {
+			$("footer").delay(250).animate({
+				bottom: '0px'
+			}, 1500);
+		})
 	</script>
 	<script type="text/javascript">
 		/* Credit where credit is due: http://stackoverflow.com/a/8263907/472768 */
@@ -43,39 +48,39 @@
 		<h1>For artists</h1>
 		<div class="span5 FeatureBlock">
 			<div class="Feature">
-				<h2>Artist centric</h2>
+				<h2>Built for artists</h2>
 				<p>Music isn't just about individual songs. You are a talented individual with stories to share, and nepTune focuses on you as an artist&mdash;a creator of awesome music. 
 			</div>
 			<div class="Feature">
 				<h2>Tell your story</h2>
-				<p>You have your influences and favorite bands, and your songs are inspired by a great story&hellip;or maybe you just started with a really cool chord. Either way, we would love to know about where you and your work came from! nepTune provides a great way for you to share this through exclusive content that consumers unlock when they support your music.</p>
+				<p>You have your influences and favorite bands, and your songs are inspired by a great story&hellip;or maybe you just started with a really cool chord. Either way, we would love to know about where you and your inspiration came from! nepTune provides a great way for you to share this through exclusive content that fans unlock when they support your music.</p>
 			</div>
 			<div class="Feature">
 				<h2>Beautiful homepage</h2>
-				<p>Your music deserves better than a page that looks like a newspaper article. nepTune gives you a beautiful home for you and your music and makes it incredibly easy for consumers to find what they're looking for.</p>
+				<p>Your music deserves better than a page that looks like a newspaper article. nepTune gives you a beautiful home for you and your fans and makes it incredibly easy for fans to find what they're searching for.</p>
 			</div>
 			<div class="Feature">
 				<h2>Fair, equal promotion</h2>
-				<p>Labels shouldn't have the right to decide what music consumers listen to. nepTune provides an equal opportunity for every artist to get your music out in front of people and discover success. Along the way, you'll build a loyal fanbase who love you and your music. Doesn't that sound much better than having a guy in a suit decide what people listen to?</p>
+				<p>Labels shouldn't have the right to decide what music fans listen to. nepTune provides an equal opportunity for every artist to get your music out in front of people and discover success. Along the way, you'll build a loyal fanbase who love you and your music. Doesn't that sound better than having a guy in a tacky suit decide what people listen to?</p>
 			</div>
 		</div>
 		<div class="span5 FeatureBlock">
 			<div class="Feature">
 				<h2>Rapid sharing</h2>
-				<p>nepTune makes it incredibly easy for consumers and artists alike to share songs they like with each other. This is much more effective than being bombarded by mass-manufactured generic songs everywhere you go. This means that people will take the time to appreciate your work and gets your music out in front of many more people who genuinely love it.</p>
+				<p>nepTune makes it incredibly easy for listeners and artists alike to share songs they like with each other. This is much more effective than being bombarded by mass-manufactured generic songs everywhere you go. This means that people will take the time to appreciate your work and gets your music out in front of many more people who genuinely love it.</p>
 			</div>
 			<div class="Feature">
 				<h2>Crowd-sourced talent</h2>
-				<p>Maybe you're an incredibly talented guitarist, but you don't know how to make a music video. Or maybe your band is ready to release a great album, but you don't have any cover art. But you have a great fanbase, and <em>someone</em> will know how to make that music video, or create that cover art.</p>
+				<p>Maybe you're an incredibly talented guitarist, but you don't know how to make a music video. Or maybe your band is ready to release a great album, but you don't have any cover art. But you have a great fanbase, and <em>someone</em> will know how to make that music video, or create that cover art. nepTune is committed to bringing artists and fans together, and great things come out of that interaction.</p>
 			</div>
 			<div class="Feature">
 				<h2>Surrounded by quality</h2>
-				<p>Your music shouldn't be next to random family videos&mdash;it deserves an environment surrounded by other great music and consumers who will appreciate it. nepTune provides this incredible environment, and we would love to have you be a part of it.</p>
+				<p>Your music shouldn't be next to random family videos&mdash;it deserves an environment surrounded by other great music and an audience who will appreciate it. nepTune provides this incredible environment, and we would love for you to be a part of it.</p>
 			</div>
 		</div>
 	</div>
 	<div class="row-fluid" id="forConsumers">
-		<h1>For consumers</h1>
+		<h1>For listeners</h1>
 		<div class="span5 FeatureBlock">
 			<div class="Feature">
 				<h2>Discover incredible new music</h2>
@@ -104,11 +109,14 @@
 	<footer id="signup">
 		<div id="footerForm">
 			<p>Stay up to date:</p>
-			<form>
-				<input type="text" placeholder="First name" id="fname" />
-				<input type="text" placeholder="Last name" id="lname" />
-				<input type="email" placeholder="Email" id="email" />
-				<div class="btn" id="signupButton" onclick="signup()" ><span>Sign up!</span></div>
+			<form method="POST" action="useremailsignup.php">
+				<input type="text" name="fname" id="fname" placeholder="First name" />
+				<label for="fname">First name</label>
+				<input type="text" name="lname" id="lname" placeholder="Last name" />
+				<label for="lname">Last name</label>
+				<input type="email" name="email" id="email" placeholder="Email" />
+				<label for="email">Email</label>
+				<div class="btn" id="signupButton" onclick="newUserSignup()" ><span>Sign up!</span></div>
 			</form>
 			<div id="feedbackButtons">
 				<div class="btn FeedbackBtn" id="consumerFeedbackButton"><a href="http://bit.ly/nepTuneFeedback">Music lover feedback</a></div>

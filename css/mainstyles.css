@@ -40,28 +40,37 @@ div#forConsumers {
 }
 div.FeatureBlock h2 {
   font-size: 26px;
+  line-height: 28px;
 }
 footer {
   background-color: #7A068F;
-  bottom: 0;
+  bottom: -136px;
   box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
   color: white;
   left: 0;
   height: 100px;
-  padding: 28px 36px;
+  padding: 18px 36px;
   position: fixed;
   width: 100%;
 }
-footer div#footerForm {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+footer a {
+  color: #f16b25;
 }
-footer div#footerForm p {
+footer a:hover {
+  color: #f16b25;
+  pointer: cursor;
+  text-decoration: none;
+}
+footer p {
   display: inline-block;
   font-size: 24px;
   font-weight: bold;
   margin: 0 18px 14px 0;
+  text-align: center;
+}
+footer div#footerForm {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 footer div#footerForm form {
