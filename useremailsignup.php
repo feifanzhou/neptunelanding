@@ -12,10 +12,14 @@
 	$link = mysqli_connect("$hostname", $username, $password);
 	$db_selected = mysql_select_db("leads", $link);
 	if (mysqli_connect_errno($link)) {
- 		print "Error";
+ 		print "Error: " . mysql_error();
  		die();
  	}
-	mysql_query("INSERT INTO leads (fname, lname, email) VALUES ('") . $fname . "', '" . $lname . "', '" . $email . "')");
+	mysql_query("INSERT INTO leads (fname, lname, email) VALUES ('" . $fname . "', '" . $lname . "', '" . $email . "')");
 	mysqli_close($link);
+	$fh = fopen('signups.txt', 'a+') or die("Error can't open text file");
+	$newEntry = $_POST["fname"] . "|^|^|" . $_POST["lname"] . "|^|^|" . $_POST["email"];
+	fwrite($fh, $newEntry);
+	fclose($fh);
 	print $_POST["fname"];
 ?>

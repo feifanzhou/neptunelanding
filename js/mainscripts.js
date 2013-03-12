@@ -13,7 +13,7 @@ function newUserSignup() {
 		dateType: 'json',
 		data: {fname: fnameVal, lname: lnameVal, email: emailVal}
 	}).done(function(reply) {
-		if (reply != 'Error') {
+		if (reply.indexOf("Error") == -1) {
 			var outputString = "<p>" + reply + ", thanks for your interest! We hope you're as excited about nepTune as we are. If you have any questions, please send <a href='mailto:future@neptunemusic.co'>send us a message</a>!</p>";
 			$("#signup").html(outputString);
 		}
