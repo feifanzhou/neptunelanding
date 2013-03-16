@@ -1,0 +1,114 @@
+@import url('colors.less');
+
+div#mantra {
+	margin-top: 72px;
+	margin-bottom: 32px;
+	div#logo {
+		text-align: center;
+		img {
+			height: 72px;
+			@media (max-width: 480px) {
+				height: auto;
+				width: 240px;
+			}
+		}
+	}
+	.Tagline {
+		font-size: 1.75em;
+		font-weight: bold;
+		line-height: 1.25em;
+		margin: 32px;
+		text-align: center;
+	}
+	p#description {
+		color: @light-grey;
+		font-size: 1.75em;
+		font-weight: bold;
+		line-height: 1.25em;
+		padding: 0 13%;
+		text-align: center;
+		@media (max-width: 480px) {
+			font-size: 1.3em;
+			line-height: 1.1em;
+		}
+	}
+}
+
+div#forArtists {
+	background-color: @neptune-dark-blue;
+	color: white;
+	padding-bottom: 20px;
+	.Content {
+		margin: 28px;
+	}
+}
+
+div#forConsumers {
+	margin-bottom: 20px;
+	.Content {
+		margin: 28px;
+	}
+}
+
+div#signup {
+	background-color: @neptune-dark-purple;
+	color: white;
+	text-align: center;
+	.Content {
+		display: inline-block;
+		div#stayTunedText {
+			display: inline-block;
+			margin-bottom: 24px;
+			padding-right: 20px;
+			text-align: center;
+			width: 220px;
+			h3 {
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 20px;
+			}
+			.FeedbackBtn {
+				a {
+					color: @neptune-dark-purple;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		div#signupForm {
+			display: inline-block;
+			margin-top: 16px;
+			input#fname {
+				width: 200px;
+				@media (max-width: 480px) {
+					display: block;
+					width: 180px;
+				}
+			}
+			input#lname {
+				width: 200px;
+				@media (max-width: 480px) {
+					display: block;
+					width: 180px;
+				}
+			}
+			input#email {
+				width: 418px;
+				@media (max-width: 480px) {
+					display: block;
+					width: 180px;
+				}
+			}
+			div#signupButton {
+				color: @neptune-orange;
+				font-weight: bold;
+				width: 406px;
+				@media (max-width: 480px) {
+					width: 168px;
+				}
+			}
+		}
+	}
+}

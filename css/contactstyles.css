@@ -1,0 +1,70 @@
+@font-face {
+  font-family: webTune;
+  src: url('../fonts/webtune.ttf') format('truetype'), url('../fonts/webtune.eot') format('eot'), url('../fonts/webtune.woff') format('woff'), url('../fonts/webtune.svg') format('svg');
+  font-weight: 400;
+}
+div#contactIntro {
+  margin-top: 28px;
+  margin-right: 28px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+}
+div#contactInfo {
+  margin: 28px;
+  text-align: center;
+}
+div#contactInfo .ContactBox {
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  height: 176px;
+  margin-bottom: 18px;
+  padding: 10px;
+}
+div#contactInfo .ContactBox h2 {
+  font-size: 1.5em;
+}
+div#contactInfo .ContactBox p {
+  margin-bottom: 4px;
+}
+div#contactInfo .ContactBox p.AddressLine1,
+div#contactInfo .ContactBox p.AddressLine2 {
+  font-weight: bold;
+}
+div#contactInfo .ContactBox p#emailContact:before {
+  color: #aaaaaa;
+  content: 'e';
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox p#fbContact:before {
+  color: #aaaaaa;
+  content: 'f';
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox p#twitterContact:before {
+  color: #aaaaaa;
+  content: 't';
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox a {
+  color: black;
+}
+div#contactInfo .ContactBox a:hover {
+  color: #20c0f1;
+  text-decoration: none;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock {
+  text-align: center;
+  width: 100%;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock .FeedbackBtn {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock .FeedbackBtn a:hover {
+  color: black;
+}

@@ -1,103 +1,47 @@
+@import url('colors.less');
+
 body {
 	background: url('../images/dust.png');
 	height: 100%;
-}
-
-div#mantra {
-	margin: 32px;
-		div#logo {
-		margin: 72px auto 18px auto;
-		text-align: center;
-		img {
-			height: 72px;
-		}
-	}
-
-	p.Tagline {
-		font-size: 1.75em;
-		font-weight: bold;
-		margin: 48px;
-		text-align: center;
-	}
-
-	p#description {
-		color: #aaa;
-		font-size: 1.5em;
-		font-weight: bold;
-		line-height: 1.25em;
-		margin: auto;
-		text-align: center;
-		width: 500px;
+	width: 100%
+	@media (max-width: 767px) {
+		padding: 0;
 	}
 }
 
-div#forArtists {
-	background-color: rgb(15, 116, 145);	
-	color: white;
-	height: 100%;
-	padding: 16px 48px;
-}
-
-div#forConsumers {
-	clear: both;
-	margin-bottom: 160px;
-	padding: 16px 48px;
-}
-
-div.FeatureBlock {
-	h2 {
-		font-size: 26px;
-		line-height: 28px;
-	}
-}
+/* h2 {
+	color: @neptune-dark-blue;
+} */
 
 footer {
-	background-color: #7A068F;
-	bottom: -136px;
-	box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
-	color: white;
-	left: 0;
-	height: 100px;
-	padding: 18px 36px;
-	position: fixed;
-	width: 100%;
-	a {
-		color: rgb(241, 107, 37);
-		&:hover {
-			color: rgb(241, 107, 37);
-			pointer: cursor;
-			text-decoration: none;
-		}
-	}
-	p {
-		display: inline-block;
-		font-size: 24px;
+	// bottom: 0;
+	font-size: 1.2em;
+	margin: 15px auto;
+	// position: absolute;
+	div#footerLinks {
 		font-weight: bold;
-		margin: 0 18px 14px 0;
-		text-align: center;
-	}
-	div#footerForm {
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		form {
-			display: inline-block;
-			margin-bottom: 10px;
-		}
-		div#signupButton {
-			margin-bottom: 10px;
-		}
-		div#feedbackButtons {
-			margin-bottom: 10px;
-			div.FeedbackBtn {
+		text-align: left;
+		ul {
+			list-style: none;
+			margin-left: 10%;
+			li {
 				display: inline-block;
-				margin: 5px 5px;
-				width: 140px;
+				float: left;
+				margin-right: 7%;
 				a {
-					color: black;
-					text-decoration: none;
+					color: @neptune-dark-blue;
+					&:hover {
+						color: @neptune-light-blue;
+						text-decoration: none;
+					}
 				}
 			}
+		}
+	}
+	div#copyright {
+		text-align: right;
+		p {
+			margin-right: 10%;
 		}
 	}
 }

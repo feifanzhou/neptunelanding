@@ -1,94 +1,40 @@
 body {
   background: url('../images/dust.png');
   height: 100%;
-}
-div#mantra {
-  margin: 32px;
-}
-div#mantra div#logo {
-  margin: 72px auto 18px auto;
-  text-align: center;
-}
-div#mantra div#logo img {
-  height: 72px;
-}
-div#mantra p.Tagline {
-  font-size: 1.75em;
-  font-weight: bold;
-  margin: 48px;
-  text-align: center;
-}
-div#mantra p#description {
-  color: #aaa;
-  font-size: 1.5em;
-  font-weight: bold;
-  line-height: 1.25em;
-  margin: auto;
-  text-align: center;
-  width: 500px;
-}
-div#forArtists {
-  background-color: #0f7491;
-  color: white;
-  height: 100%;
-  padding: 16px 48px;
-}
-div#forConsumers {
-  clear: both;
-  margin-bottom: 160px;
-  padding: 16px 48px;
-}
-div.FeatureBlock h2 {
-  font-size: 26px;
-  line-height: 28px;
-}
-footer {
-  background-color: #7A068F;
-  bottom: -136px;
-  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
-  color: white;
-  left: 0;
-  height: 100px;
-  padding: 18px 36px;
-  position: fixed;
   width: 100%;
 }
-footer a {
-  color: #f16b25;
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
 }
-footer a:hover {
-  color: #f16b25;
-  pointer: cursor;
-  text-decoration: none;
+footer {
+  font-size: 1.2em;
+  margin: 15px auto;
 }
-footer p {
-  display: inline-block;
-  font-size: 24px;
+footer div#footerLinks {
   font-weight: bold;
-  margin: 0 18px 14px 0;
-  text-align: center;
+  text-align: left;
 }
-footer div#footerForm {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+footer div#footerLinks ul {
+  list-style: none;
+  margin-left: 10%;
 }
-footer div#footerForm form {
+footer div#footerLinks ul li {
   display: inline-block;
-  margin-bottom: 10px;
+  float: left;
+  margin-right: 7%;
 }
-footer div#footerForm div#signupButton {
-  margin-bottom: 10px;
+footer div#footerLinks ul li a {
+  color: #0f7491;
 }
-footer div#footerForm div#feedbackButtons {
-  margin-bottom: 10px;
-}
-footer div#footerForm div#feedbackButtons div.FeedbackBtn {
-  display: inline-block;
-  margin: 5px 5px;
-  width: 140px;
-}
-footer div#footerForm div#feedbackButtons div.FeedbackBtn a {
-  color: black;
+footer div#footerLinks ul li a:hover {
+  color: #20c0f1;
   text-decoration: none;
+}
+footer div#copyright {
+  text-align: right;
+}
+footer div#copyright p {
+  margin-right: 10%;
 }

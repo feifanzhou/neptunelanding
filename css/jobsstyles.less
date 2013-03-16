@@ -1,0 +1,120 @@
+@import url('colors.less');
+@import url('mainstyles.less');
+
+div#mission {
+	margin-top: 48px;
+	margin-bottom: 32px;
+	p {
+		color: @medium-grey;
+		font-size: 1.3em;
+		font-weight: bold;
+		line-height: 1.1em;
+		margin-bottom: 28px;
+		padding: 0 15%;
+		text-align: center;
+		&#actionCall {
+			color: black;
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+div#broken {
+	div#workplace {
+		padding-left: 28px;
+	}
+	.Quote {
+		margin-top: 56px;
+		.QuoteText {
+			color: @neptune-orange;
+			font-size: 2.5em;
+			font-weight: bold;
+			line-height: 1.25em;
+			&:before {
+				content: open-quote;
+				display: inline-block;
+				font-size: 1em;
+			}
+			&:after {
+				content: close-quote;
+				font-size: 1em;
+			}
+		}
+		.QuoteAuthor {
+			color: @medium-grey;
+			font-style: italic;
+			&:before {
+				content: "\2013\0020";
+			}
+		}	
+	}
+}
+
+div#setting {
+	div#environment {
+		padding-left: 28px;
+	}
+	div#hubs {
+		background-color: white;
+		box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+		padding: 20px;
+		margin-top: 58px;
+		margin-right: 28px;
+	}
+}
+
+div#positions {
+	div#teamIntro {
+		margin: 28px;
+	}
+	div#positionsListBlock {
+		background-color: @neptune-dark-blue;
+		ul#positionsList {
+			color: white;
+			list-style: none;
+			margin-left: 28px;
+			margin-right: 28px;
+			li {
+				&.PositionEntryBorder {
+					border-bottom: 1px solid #eee;
+				}
+				h3 {
+					cursor: pointer;
+					margin: 0;
+					padding: 10px;
+				}
+				div.PositionDetails {
+					display: none;
+					padding: 10px;
+					div.PositionReqs {
+						li {
+							margin-bottom: 8px;
+						}
+					}
+					div.PositionApply {
+						.ApplyNowBlock {
+							margin-bottom: 36px;
+							h4 {
+								margin-bottom: 2px;
+							}
+							p {
+								margin-bottom: 4px;
+							}
+							a {
+								color: white;
+								&:hover {
+									color: @neptune-light-blue;
+									text-decoration: none;
+								}
+							}
+						}
+						.SharePositionBlock {
+						
+						}
+					}
+				}
+			}
+		}
+	}
+}

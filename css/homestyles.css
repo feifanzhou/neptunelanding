@@ -1,0 +1,119 @@
+div#mantra {
+  margin-top: 72px;
+  margin-bottom: 32px;
+}
+div#mantra div#logo {
+  text-align: center;
+}
+div#mantra div#logo img {
+  height: 72px;
+}
+@media (max-width: 480px) {
+  div#mantra div#logo img {
+    height: auto;
+    width: 240px;
+  }
+}
+div#mantra .Tagline {
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 32px;
+  text-align: center;
+}
+div#mantra p#description {
+  color: #aaaaaa;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.25em;
+  padding: 0 13%;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  div#mantra p#description {
+    font-size: 1.3em;
+    line-height: 1.1em;
+  }
+}
+div#forArtists {
+  background-color: #0f7491;
+  color: white;
+  padding-bottom: 20px;
+}
+div#forArtists .Content {
+  margin: 28px;
+}
+div#forConsumers {
+  margin-bottom: 20px;
+}
+div#forConsumers .Content {
+  margin: 28px;
+}
+div#signup {
+  background-color: #480057;
+  color: white;
+  text-align: center;
+}
+div#signup .Content {
+  display: inline-block;
+}
+div#signup .Content div#stayTunedText {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-right: 20px;
+  text-align: center;
+  width: 220px;
+}
+div#signup .Content div#stayTunedText h3 {
+  margin-bottom: 0;
+}
+div#signup .Content div#stayTunedText p {
+  margin-bottom: 20px;
+}
+div#signup .Content div#stayTunedText .FeedbackBtn a {
+  color: #480057;
+}
+div#signup .Content div#stayTunedText .FeedbackBtn a:hover {
+  text-decoration: none;
+}
+div#signup .Content div#signupForm {
+  display: inline-block;
+  margin-top: 16px;
+}
+div#signup .Content div#signupForm input#fname {
+  width: 200px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#fname {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm input#lname {
+  width: 200px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#lname {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm input#email {
+  width: 418px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#email {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm div#signupButton {
+  color: #f3660f;
+  font-weight: bold;
+  width: 406px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm div#signupButton {
+    width: 168px;
+  }
+}

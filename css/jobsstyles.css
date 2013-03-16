@@ -1,0 +1,99 @@
+div#mission {
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+div#mission p {
+  color: #777777;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.1em;
+  margin-bottom: 28px;
+  padding: 0 15%;
+  text-align: center;
+}
+div#mission p#actionCall {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+div#broken div#workplace {
+  padding-left: 28px;
+}
+div#broken .Quote {
+  margin-top: 56px;
+}
+div#broken .Quote .QuoteText {
+  color: #f3660f;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.25em;
+}
+div#broken .Quote .QuoteText:before {
+  content: open-quote;
+  display: inline-block;
+  font-size: 1em;
+}
+div#broken .Quote .QuoteText:after {
+  content: close-quote;
+  font-size: 1em;
+}
+div#broken .Quote .QuoteAuthor {
+  color: #777777;
+  font-style: italic;
+}
+div#broken .Quote .QuoteAuthor:before {
+  content: "\2013\0020";
+}
+div#setting div#environment {
+  padding-left: 28px;
+}
+div#setting div#hubs {
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  margin-top: 58px;
+  margin-right: 28px;
+}
+div#positions div#teamIntro {
+  margin: 28px;
+}
+div#positions div#positionsListBlock {
+  background-color: #0f7491;
+}
+div#positions div#positionsListBlock ul#positionsList {
+  color: white;
+  list-style: none;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+div#positions div#positionsListBlock ul#positionsList li.PositionEntryBorder {
+  border-bottom: 1px solid #eee;
+}
+div#positions div#positionsListBlock ul#positionsList li h3 {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails {
+  display: none;
+  padding: 10px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionReqs li {
+  margin-bottom: 8px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock {
+  margin-bottom: 36px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock h4 {
+  margin-bottom: 2px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock p {
+  margin-bottom: 4px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock a {
+  color: white;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock a:hover {
+  color: #20c0f1;
+  text-decoration: none;
+}

@@ -1,0 +1,34 @@
+div#story {
+  padding: 28px;
+}
+div#guidance .Content {
+  background-color: #0f7491;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-top: 32px;
+  margin-right: 20px;
+}
+div#guidance .Content h2 {
+  padding: 5px 15px;
+}
+div#guidance .Content .ListItemBox {
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+div#guidance .Content ul {
+  list-style: none;
+  margin-left: 0;
+}
+div#guidance .Content ul li {
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+div#guidance .Content ul li h3 {
+  margin: 0;
+  padding: 10px 15px;
+}
+div#guidance .Content ul li p {
+  display: none;
+  padding: 10px 15px;
+}
+div#guidance .Content ul li:hover {
+  cursor: pointer;
+}
