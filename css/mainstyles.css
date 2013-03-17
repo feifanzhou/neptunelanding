@@ -1,3 +1,8 @@
+@font-face {
+  font-family: webTune;
+  src: url('../fonts/webtune.ttf') format('truetype'), url('../fonts/webtune.eot') format('eot'), url('../fonts/webtune.woff') format('woff'), url('../fonts/webtune.svg') format('svg');
+  font-weight: 400;
+}
 body {
   background: url('../images/dust.png');
   height: 100%;
@@ -7,6 +12,13 @@ body {
   body {
     padding: 0;
   }
+}
+div#spinnerBase {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 /* h2 {
 	color: @neptune-dark-blue;
@@ -36,13 +48,15 @@ footer div#footerLinks ul li {
   display: inline-block;
   float: left;
   margin-right: 7%;
-}
-footer div#footerLinks ul li a {
   color: #0f7491;
 }
-footer div#footerLinks ul li a:hover {
+footer div#footerLinks ul li:hover {
   color: #20c0f1;
+  cursor: pointer;
   text-decoration: none;
+}
+footer div#footerLinks ul li.CurrentNav {
+  color: #f3660f;
 }
 footer div#copyright {
   color: #777777;

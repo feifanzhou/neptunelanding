@@ -19,8 +19,12 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/mainstyles.css" type="text/css" />
 	<link rel="stylesheet" href="css/homestyles.css" type="text/css" />
+	<link rel="stylesheet" href="css/storystyles.css" type="text/css" />
+	<link rel="stylesheet" href="css/jobsstyles.css" type="text/css" />
+	<link rel="stylesheet" href="css/contactstyles.css" type="text/css" />
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/mainscripts.js"></script>
+	<script src="js/activity-indicator.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {	// Load Retina images
 			if (window.devicePixelRatio > 1.5) {
@@ -44,8 +48,116 @@
 			}
 		});
 	</script>
+	<script type="text/javascript">	// For stories page
+		function showPrinciples(tag) {
+			for (var i = 0; i < 3; i++) {
+				var selector = "#guidance" + i;
+				if (i == tag)
+					$(selector).slideDown(400);
+				else
+					$(selector).slideUp(400);
+			}
+		}
+	</script>
+	<script type="text/javascript">	// For jobs page
+		function showPositionDetails(tag) {
+			var currID = "#positionInfo" + tag;
+			var otherTag
+			if (tag == 0)
+				otherTag = 1
+			else
+				otherTag = 0;
+			var otherID = "#positionInfo" + otherTag;
+			$(otherID).slideUp(400);
+			$(currID).slideDown(400);
+			$('html, body').animate({
+				scrollTop: $(currID).offset().top
+			}, 600);
+		}
+	</script>
 </head>
 <body>
+	<div id="spinnerBase"></div>
+	<div id="bodyContent">
+	<script type="text/javascript">	// For AJAX page load
+		// Note that this isn't good for SEO, but we can fix that later
+		function titleForIndex(index) {
+			switch(index) {
+				case 1:
+					return "nepTune | Our Story";
+					break;
+				case 2:
+					return "nepTune | Jobs";
+					break;
+				case 3:
+					return "nepTune | Contact";
+					break;
+				default:
+					return "nepTune";
+					break;
+			}
+		}
+		function makeAJAXRequest(index) {
+			$.ajax({
+				type: "POST",
+				url: "ajaxloadpage.php",
+				dateType: 'json',
+				data: {pageIndex: index}
+			}).done(function(reply) {
+				$("#spinnerBase").css('display', 'none');
+				document.title = titleForIndex(index);
+				$("#spinnerBase").activity(false);
+				$("#bodyContent").css('marginLeft', 0);
+				$("#bodyContent").css('marginRight', 0);
+				$("#bodyContent").html(reply);
+				var navLinkID = "navLink" + window.location.hash.substring(1);
+				$(navLinkID).addClass('CurrentNav');
+				$("#bodyContent").animate({
+					opacity: 1
+				});
+			});
+		}
+		function prepAJAX(index) {
+			$("#spinnerBase").css('display', 'block');
+			window.location.hash = index;
+			$("#spinnerBase").activity();
+			$("#bodyContent").css('opacity', '0');
+			var navLinkID = "navLink" + window.location.hash.substring(1);
+			$(navLinkID).removeClass('CurrentNav');
+			makeAJAXRequest(index);
+		}
+		function loadPage(index, animate) {
+			// if (index == window.location.hash.substring(1))
+				// return;
+			var moveLeft = -(parseInt($("#bodyContent").css('marginLeft'),10) == 0 ? $("#bodyContent").outerWidth() : 0);
+			var moveRight = parseInt($("#bodyContent").css('marginRight'),10) == 0 ? $("#bodyContent").outerWidth() : 0;
+			if (index < window.location.hash.substring(1)) {
+				moveLeft *= -1;
+				moveRight *= -1;
+			}
+			if (animate) {
+				if ($(".HeroHeader")[0]) {
+					$(".HeroHeader").animate({
+						left: moveLeft,
+						right: moveRight
+					});
+				}
+			}
+			if (animate) {
+				$("#bodyContent").animate({
+					marginLeft: moveLeft,
+					marginRight: moveRight
+				}, function() {
+					prepAJAX(index);
+				});
+			}
+			else
+				prepAJAX(index);
+		}
+		var locHash = window.location.hash;
+		if (locHash.length > 0)
+			loadPage(locHash.substring(1), false);
+	</script>
 	<div class="row-fluid" id="mantra">
 		<div id="logo"><img src="images/logo.png" alt="nepTune Music" height="55px" /></div>
 		<p class="Tagline">Discover, enjoy and share great music from around the world</p>
@@ -57,7 +169,7 @@
 			<div class="span6 FeatureBlock">
 				<div class="Feature">
 					<h2>Built for artists</h2>
-					<p>Music isn't just about individual songs. You are a talented individual with stories to share, and nepTune focuses on you as an artist&mdash;a creator of awesome music. 
+					<p>Music isn't just about individual songs. You are a talented individual with stories to share, and nepTune focuses on you as an artist&mdash;a creator of awesome music.</p>
 				</div>
 				<div class="Feature">
 					<h2>Tell your story</h2>
@@ -137,6 +249,7 @@
 				</form>
 			</div>
 		</div>
+	</div>
 	</div>
 	<?php include('includes/footer.inc.php') ?>
 </body>

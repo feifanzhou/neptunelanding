@@ -43,7 +43,7 @@
 	</script>
 </head>
 <body>
-	<div class="row-fluid" id="heroHeader">
+	<div class="row-fluid" id="storyHeader">
 		<h1>The Future of Creativity</h1>
 	</div>
 	<div class="Content row-fluid LastBlockBeforeFooter">

@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20100429 at Sat Mar 16 19:54:39 2013
+Created by FontForge 20100429 at Sun Mar 17 01:32:41 2013
  By root
 Copyright (C) 2012 by original authors @ fontello.com
 </metadata>
@@ -16,7 +16,7 @@ Copyright (C) 2012 by original authors @ fontello.com
     panose-1="2 0 6 3 0 0 0 0 0 0"
     ascent="850"
     descent="-150"
-    bbox="15 -100 935 800"
+    bbox="14.7778 -150 1015 850"
     underline-thickness="50"
     underline-position="-100"
     unicode-range="U+0065-0074"
@@ -34,6 +34,10 @@ d="M17 626q2 14 26 14h846q38 0 20 -32q-8 -15 -24 -22l-97 -51l-180 -97q-93 -50 -9
 q17 -10 46 -10t46 10z" />
     <glyph glyph-name="f" unicode="f" horiz-adv-x="530" 
 d="M515 644h-142q-16 0 -26 -16.5t-10 -35.5v-102h178v-148h-178v-442h-170v442h-152v148h152v86q0 92 58.5 158t147.5 66h142v-156z" />
+    <glyph glyph-name="s" unicode="s" horiz-adv-x="1030" 
+d="M16 446q35 175 174.5 289.5t320.5 114.5q79 0 159 -26q5 -2 7.5 -7t-0.5 -10l-51 -87q-5 -8 -13 -6q-53 14 -102 14q-85 0 -158 -34q-79 -35 -135.5 -102t-78.5 -151q-2 -9 -11 -9h-101q-11 0 -11 12v2zM676 -107q1 -4 1.5 -7.5t-3.5 -6.5t-8 -4.5t-10 -3.5t-10.5 -3
+t-10.5 -2t-8 -2q-59 -14 -117 -14q-102 0 -193 38q-115 47 -196 144.5t-106 221.5q-1 5 2.5 9.5t9.5 4.5h100q10 0 12 -10q17 -68 59 -126q54 -74 135.5 -117t176.5 -43q50 0 103 14q7 1 13 -6zM779 82q50 46 82 119.5t32 153.5q0 162 -114 274q-7 7 -2 14l50 87q3 5 8.5 6
+t9.5 -3q43 -39 78 -87q92 -130 92 -291q0 -97 -36 -188q-43 -109 -134 -190q-11 -9 -18 4l-50 87q-5 8 2 14z" />
     <glyph glyph-name="t" unicode="t" horiz-adv-x="950" 
 d="M935 636q-37 -56 -94 -98v-24q0 -130 -60 -250q-60 -121 -186 -203q-127 -83 -290 -83q-159 0 -290 84q18 -2 46 -2q131 0 234 80q-64 2 -111.5 39t-64.5 93q9 -4 34 -4q26 0 50 6q-63 13 -106.5 64.5t-43.5 121.5v2q36 -20 84 -24q-84 58 -84 158q0 47 26 94
 q155 -189 390 -196q-6 18 -6 42q0 78 55.5 133t134.5 55q82 0 136 -58q58 12 120 44q-19 -66 -82 -104q55 8 108 30z" />

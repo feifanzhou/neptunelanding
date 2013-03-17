@@ -1,4 +1,5 @@
 @import url('colors.less');
+@import url('fonts.less');
 
 body {
 	background: url('../images/dust.png');
@@ -7,6 +8,14 @@ body {
 	@media (max-width: 767px) {
 		padding: 0;
 	}
+}
+
+div#spinnerBase {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 /* h2 {
@@ -36,12 +45,14 @@ footer {
 				display: inline-block;
 				float: left;
 				margin-right: 7%;
-				a {
-					color: @neptune-dark-blue;
-					&:hover {
-						color: @neptune-light-blue;
-						text-decoration: none;
-					}
+				color: @neptune-dark-blue;
+				&:hover {
+					color: @neptune-light-blue;
+					cursor: pointer;
+					text-decoration: none;
+				}
+				&.CurrentNav {
+					color: @neptune-orange;
 				}
 			}
 		}

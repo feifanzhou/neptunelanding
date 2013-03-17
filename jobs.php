@@ -48,7 +48,7 @@
 	</script>
 </head>
 <body>
-	<div class="row-fluid" id="heroHeader">
+	<div class="row-fluid" id="workHeader">
 		<h1>The Future of Work</h1>
 	</div>
 	<div class="row-fluid" id="mission">

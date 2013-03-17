@@ -1,10 +1,10 @@
-div#heroHeader {
+div#workHeader {
   background-image: url('../images/work.jpg');
   background-position: center;
   background-size: 100% auto;
   height: 300px;
 }
-div#heroHeader h1 {
+div#workHeader h1 {
   color: white;
   right: 25px;
   font-size: 3.5em;
