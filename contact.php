@@ -69,5 +69,8 @@
 			</div>
 		</div>
 	</div>
+	<div class="row-fluid LastBlockBeforeFooter" id="insetLogo">
+		<img src="images/logoInset.png" />
+	</div>
 	<?php include('includes/footer.inc.php') ?>
 </body>

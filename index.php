@@ -15,6 +15,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>nepTune</title>
 	<meta property="fb:admins" content="100001324728942" />
+	<meta property="og:title" content="nepTune Jobs" />
+	<meta property="og:type" content="company" />
+	<meta property="og:url" content="http://neptunemusic.co/#2" />
+	<meta property="og:image" content="http://neptunemusic.co/images/logo.png" />
+	<meta property="og:site_name" content="nepTune Music" />
+	<meta property="fb:admins" content="100001324728942" />
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
@@ -79,17 +86,14 @@
 </head>
 <body>
 	<div id="spinnerBase"></div>
-	<div id="fb-root"></div>
-	<script>	// Facebook 
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}
-		(document, 'script', 'facebook-jssdk'));
-	</script>
+	<div id="fb-root"></div>	
+	<script>(function(d, s, id) {	// Facebook
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="bodyContent">
 	<script type="text/javascript">	// For AJAX page load
 		// Note that this isn't good for SEO, but we can fix that later
