@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>nepTune</title>
+	<meta property="fb:admins" content="100001324728942" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
@@ -78,6 +79,17 @@
 </head>
 <body>
 	<div id="spinnerBase"></div>
+	<div id="fb-root"></div>
+	<script>	// Facebook 
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}
+		(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div id="bodyContent">
 	<script type="text/javascript">	// For AJAX page load
 		// Note that this isn't good for SEO, but we can fix that later
@@ -112,6 +124,7 @@
 				$("#bodyContent").html(reply);
 				var navLinkID = "navLink" + window.location.hash.substring(1);
 				$(navLinkID).addClass('CurrentNav');
+				window.scrollTo(0, 0);
 				$("#bodyContent").animate({
 					opacity: 1
 				});
@@ -135,7 +148,11 @@
 				moveLeft *= -1;
 				moveRight *= -1;
 			}
-			if (animate) {
+			else if (index == window.location.hash.substring(1)) {
+				moveLeft = 0;
+				moveRight = 0;
+			}
+			if (animate && index != window.location.hash.substring(1)) {
 				if ($(".HeroHeader")[0]) {
 					$(".HeroHeader").animate({
 						left: moveLeft,
@@ -162,6 +179,10 @@
 		<div id="logo"><img src="images/logo.png" alt="nepTune Music" height="55px" /></div>
 		<p class="Tagline">Discover, enjoy and share great music from around the world</p>
 		<p id="description">nepTune is a place for artists and their fans to build trusting, personal relationships. The existing music industry marginalizes music and doesn’t give enough back to the artists. nepTune helps artists directly, through a supportive community and painless environment that encourages fans to support the music they love.</p>
+		<div class="Quote" id="musicians">
+			<p class="QuoteText">We're not creating celebrities. We're creating musicians.</p>
+			<p class="QuoteAuthor">Feifan Zhou, Co-Founder</p>
+		</div>
 	</div>
 	<div class="row-fluid" id="forArtists">
 		<div class="Content">

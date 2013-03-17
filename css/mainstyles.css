@@ -26,6 +26,35 @@ div#spinnerBase {
 .LastBlockBeforeFooter {
   margin-bottom: 40px;
 }
+.fb-like {
+  color: white !important;
+}
+.Quote {
+  margin-top: 56px;
+}
+.Quote .QuoteText {
+  color: #f3660f;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin-right: 10px;
+}
+.Quote .QuoteText:before {
+  content: open-quote;
+  display: inline-block;
+  font-size: 1em;
+}
+.Quote .QuoteText:after {
+  content: close-quote;
+  font-size: 1em;
+}
+.Quote .QuoteAuthor {
+  color: #777777;
+  font-style: italic;
+}
+.Quote .QuoteAuthor:before {
+  content: "\2013\0020";
+}
 footer {
   background: url('../images/dust.png');
   bottom: 0px;

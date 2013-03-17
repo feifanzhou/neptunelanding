@@ -1,8 +1,14 @@
 div#storyHeader {
   background-image: url('../images/creativity.jpg');
   background-position: center;
+  background-repeat: no-repeat;
   background-size: 100% auto;
   height: 300px;
+}
+@media (max-width: 450px) {
+  div#storyHeader {
+    display: none;
+  }
 }
 div#storyHeader h1 {
   color: white;
