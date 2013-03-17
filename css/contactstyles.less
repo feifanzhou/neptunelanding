@@ -29,23 +29,22 @@ div#contactInfo {
 			&.AddressLine1, &.AddressLine2 {
 				font-weight: bold;
 			}
-			&#emailContact:before {
-				color: @light-grey;
-				content: 'e';
+			.ContactIcon {
+				color: @neptune-orange;
 				font-family: 'webTune';
 				margin-right: 8px;
+			}
+			&#emailContact:before {
+				content: 'e';
+				.ContactIcon;
 			}
 			&#fbContact:before {
-				color: @light-grey;
 				content: 'f';
-				font-family: 'webTune';
-				margin-right: 8px;
+				.ContactIcon;
 			}
 			&#twitterContact:before {
-				color: @light-grey;
 				content: 't';
-				font-family: 'webTune';
-				margin-right: 8px;
+				.ContactIcon;
 			}
 		}
 		a {

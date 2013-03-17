@@ -3,7 +3,7 @@
 body {
 	background: url('../images/dust.png');
 	height: 100%;
-	width: 100%
+	width: 100%;
 	@media (max-width: 767px) {
 		padding: 0;
 	}
@@ -13,13 +13,21 @@ body {
 	color: @neptune-dark-blue;
 } */
 
+.LastBlockBeforeFooter {
+	margin-bottom: 40px;
+}
+
 footer {
-	// bottom: 0;
+	background: url('../images/dust.png');
+	bottom: 0px;
+	box-shadow: 0 -6px 6px -7px black;
 	font-size: 1.2em;
-	margin: 15px auto;
-	// position: absolute;
+	height: 40px;
+	padding: 15px auto;
+	position: fixed;
 	div#footerLinks {
 		font-weight: bold;
+		margin-top: 10px;
 		text-align: left;
 		ul {
 			list-style: none;
@@ -39,6 +47,9 @@ footer {
 		}
 	}
 	div#copyright {
+		color: @medium-grey;
+		font-size: 0.8em;
+		margin-top: 12px;
 		text-align: right;
 		p {
 			margin-right: 10%;

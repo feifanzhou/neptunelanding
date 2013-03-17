@@ -43,8 +43,10 @@
 	</script>
 </head>
 <body>
-	<h1>The Future of Creativity</h1>
-	<div class="Content row-fluid">
+	<div class="row-fluid" id="heroHeader">
+		<h1>The Future of Creativity</h1>
+	</div>
+	<div class="Content row-fluid LastBlockBeforeFooter">
 		<div class="span7" id="story">
 			<h2>Our Mission</h2>
 			<p>Humans should not be machines. We live, breathe and come up with incredible new ideas and works of art. But too often our environment stifles our ability to do great things. Extensive red tape and greedy people trying to capitalize on every single thing someone else does are arresting progress in our world.</p>

@@ -39,12 +39,18 @@
 			else
 				otherTag = 0;
 			var otherID = "#positionInfo" + otherTag;
-			$(currID).slideDown(400);
 			$(otherID).slideUp(400);
+			$(currID).slideDown(400);
+			$('html, body').animate({
+				scrollTop: $(currID).offset().top
+			}, 600);
 		}
 	</script>
 </head>
 <body>
+	<div class="row-fluid" id="heroHeader">
+		<h1>The Future of Work</h1>
+	</div>
 	<div class="row-fluid" id="mission">
 		<p>nepTune's mission is to liberate human creativity. We're doing this by creating a place where artists can be recognized for the merits of their work, free from bureaucracy and greedy corporate executives.</p>
 		<p id="actionCall">Creativity is the future of society. We'd love to have you on board.</p>
@@ -65,7 +71,7 @@
 		<div class="span7" id="environment">
 			<h2>Who We Are</h2>
 			<p>The nepTune team includes people from a variety of backgrounds, personal and professional. We're located around the country&mdash;because talented people are everywhere&mdash;and we all work remotely. As a result, everyone on our team is an independent thinker who is comfortable making decisions on their own, confident that what they do is in line with nepTune's vision.</p>
-			<p>nepTune was founded by two entrepreneurs, musicians, and students. Feifan Zhou has been playing piano for 13 years, worked with 3 startups before nepTune, and is a student at Cornell University. Robert Robertson has been singing for 10 years, founded 3 small businesses before nepTune, and is a student at High Point University.</p>
+			<p>nepTune was founded by two entrepreneurs, musicians, and students. Feifan&nbsp;Zhou has been playing piano for 13 years, worked with 3 startups before nepTune, and is a student at Cornell&nbsp;University. Robert&nbsp;Robertson has been singing for 10 years, founded 3 small businesses before nepTune, and is a student at High&nbsp;Point&nbsp;University.</p>
 			<p>The entire nepTune team believes that, when inspired, people are capable of doing amazing things. So nepTune was started to unlock that potential, both within our team and for the rest of the world.</p>
 			<p><strong>Just be awesome. Help us liberate human creativity.</strong></p>
 		</div>
@@ -85,10 +91,10 @@
 	<div class="row-fluid" id="positions">
 		<div id="teamIntro">
 			<h2>Positions</h2>
-			<p>The nepTune team is hard at work building nepTune Music, an online community that turns the music industry on its head. As musicians and people who love great music, we're appalled by the state of the industry. This is an opportunity to revitalize music itself.</p>
+			<p>The nepTune team is hard at work building nepTune&nbsp;Music, an online community that turns the music industry on its head. As musicians and people who love great music, we're appalled by the state of the industry. This is an opportunity to revitalize music itself.</p>
 			<p>The nepTune team works together to meet the goals we've all helped define. Each team member then takes ownership of every action, increasing efficiency and responsibility.</p>
 		</div>
-		<div id="positionsListBlock">
+		<div class="LastBlockBeforeFooter" id="positionsListBlock">
 			<ul id="positionsList">
 				<li class="PositionEntryBorder">
 					<h3 onclick="showPositionDetails(0)">UX Designer</h3>

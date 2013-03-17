@@ -8,12 +8,24 @@ body {
     padding: 0;
   }
 }
+/* h2 {
+	color: @neptune-dark-blue;
+} */
+.LastBlockBeforeFooter {
+  margin-bottom: 40px;
+}
 footer {
+  background: url('../images/dust.png');
+  bottom: 0px;
+  box-shadow: 0 -6px 6px -7px #000000;
   font-size: 1.2em;
-  margin: 15px auto;
+  height: 40px;
+  padding: 15px auto;
+  position: fixed;
 }
 footer div#footerLinks {
   font-weight: bold;
+  margin-top: 10px;
   text-align: left;
 }
 footer div#footerLinks ul {
@@ -33,6 +45,9 @@ footer div#footerLinks ul li a:hover {
   text-decoration: none;
 }
 footer div#copyright {
+  color: #777777;
+  font-size: 0.8em;
+  margin-top: 12px;
   text-align: right;
 }
 footer div#copyright p {

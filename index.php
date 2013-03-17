@@ -117,7 +117,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row-fluid" id="signup">
+	<div class="row-fluid LastBlockBeforeFooter" id="signup">
 		<div class="Content">
 				<div id="stayTunedText">
 				<h3>Stay tuned</h3>

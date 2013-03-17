@@ -1,3 +1,18 @@
+div#heroHeader {
+  background-image: url('../images/work.jpg');
+  background-position: center;
+  background-size: 100% auto;
+  height: 300px;
+}
+div#heroHeader h1 {
+  color: white;
+  right: 25px;
+  font-size: 3.5em;
+  position: absolute;
+  text-align: right;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.5);
+  top: 200px;
+}
 div#mission {
   margin-top: 48px;
   margin-bottom: 32px;
@@ -27,6 +42,7 @@ div#broken .Quote .QuoteText {
   font-size: 2.5em;
   font-weight: bold;
   line-height: 1.25em;
+  margin-right: 10px;
 }
 div#broken .Quote .QuoteText:before {
   content: open-quote;

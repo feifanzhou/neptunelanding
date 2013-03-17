@@ -38,7 +38,7 @@
 			<p>The nepTune team is hard at work building the future of music. We'd love to get feedback from you! If you have questions about nepTune or improvements that would make nepTune better for you, please get in touch with us.</p>
 		</div>
 	</div>
-	<div class="row-fluid">
+	<div class="row-fluid LastBlockBeforeFooter">
 		<div id="contactInfo">
 			<div class="span3 ContactBox" id="contactNorth">
 				<h2>nepTune North</h2>
@@ -62,7 +62,7 @@
 			</div>
 			<div class="span3 ContactBox" id="contactSurveys">
 				<h2>Feedback</h2>
-				<p>Please take our survey so that we can make nepTune Music even better.</p>
+				<p>Please take our survey so that we can make nepTune&nbsp;Music even better.</p>
 				<div id="feedbackButtonBlock">
 					<div class="btn FeedbackBtn" id="consumerFeedbackButton"><a href="http://bit.ly/nepTuneFeedback">Music feedback</a></div>
 				</div>

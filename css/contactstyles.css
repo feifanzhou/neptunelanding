@@ -30,21 +30,26 @@ div#contactInfo .ContactBox p.AddressLine1,
 div#contactInfo .ContactBox p.AddressLine2 {
   font-weight: bold;
 }
+div#contactInfo .ContactBox p .ContactIcon {
+  color: #f3660f;
+  font-family: 'webTune';
+  margin-right: 8px;
+}
 div#contactInfo .ContactBox p#emailContact:before {
-  color: #aaaaaa;
   content: 'e';
+  color: #f3660f;
   font-family: 'webTune';
   margin-right: 8px;
 }
 div#contactInfo .ContactBox p#fbContact:before {
-  color: #aaaaaa;
   content: 'f';
+  color: #f3660f;
   font-family: 'webTune';
   margin-right: 8px;
 }
 div#contactInfo .ContactBox p#twitterContact:before {
-  color: #aaaaaa;
   content: 't';
+  color: #f3660f;
   font-family: 'webTune';
   margin-right: 8px;
 }
