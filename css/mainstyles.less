@@ -2,7 +2,8 @@
 @import url('fonts.less');
 
 body {
-	background: url('../images/dust.png');
+	background-image: url('../images/dust.png');
+	font-family: 'Oxygen' !important;
 	height: 100%;
 	width: 100%;
 	@media (max-width: 767px) {
@@ -26,12 +27,14 @@ div#spinnerBase {
 	margin-bottom: 40px;
 }
 
-.fb-like {
-	color: white !important;
+a:hover {
+	color: @neptune-light-blue;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .Quote {
-	margin-top: 56px;
+	margin-top: 36px;
 	.QuoteText {
 		color: @neptune-orange;
 		font-size: 2.5em;

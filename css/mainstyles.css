@@ -1,10 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
 @font-face {
   font-family: webTune;
   src: url('../fonts/webtune.ttf') format('truetype'), url('../fonts/webtune.eot') format('eot'), url('../fonts/webtune.woff') format('woff'), url('../fonts/webtune.svg') format('svg');
   font-weight: 400;
 }
 body {
-  background: url('../images/dust.png');
+  background-image: url('../images/dust.png');
+  font-family: 'Oxygen' !important;
   height: 100%;
   width: 100%;
 }
@@ -26,11 +28,13 @@ div#spinnerBase {
 .LastBlockBeforeFooter {
   margin-bottom: 40px;
 }
-.fb-like {
-  color: white !important;
+a:hover {
+  color: #20c0f1;
+  cursor: pointer;
+  text-decoration: none;
 }
 .Quote {
-  margin-top: 56px;
+  margin-top: 36px;
 }
 .Quote .QuoteText {
   color: #f3660f;

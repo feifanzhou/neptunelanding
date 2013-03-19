@@ -71,7 +71,7 @@
 		<div class="span7" id="environment">
 			<h2>Who We Are</h2>
 			<p>The nepTune team includes people from a variety of backgrounds, personal and professional. We're located around the country&mdash;because talented people are everywhere&mdash;and we all work remotely. As a result, everyone on our team is an independent thinker who is comfortable making decisions on their own, confident that what they do is in line with nepTune's vision.</p>
-			<p>nepTune was founded by two entrepreneurs, musicians, and students. Feifan&nbsp;Zhou has been playing piano for 13 years, worked with 3 startups before nepTune, and is a student at Cornell&nbsp;University. Robert&nbsp;Robertson has been singing for 10 years, founded 3 small businesses before nepTune, and is a student at High&nbsp;Point&nbsp;University.</p>
+			<p>nepTune was founded by two entrepreneurs, musicians, and students. Feifan&nbsp;Zhou has been playing piano for 13 years, worked with 3 startups before nepTune, and is a student at Cornell&nbsp;University. Robert&nbsp;Robertson has been singing for 12 years, founded 3 small businesses before nepTune, and is a student at High&nbsp;Point&nbsp;University.</p>
 			<p>The entire nepTune team believes that, when inspired, people are capable of doing amazing things. So nepTune was started to unlock that potential, both within our team and for the rest of the world.</p>
 			<p><strong>Just be awesome. Help us liberate human creativity.</strong></p>
 		</div>

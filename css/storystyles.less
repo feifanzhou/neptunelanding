@@ -21,16 +21,20 @@ div#storyHeader {
 }
 
 div#story {
+	margin-bottom: 40px;
 	padding: 28px;
+	a {
+		color: @neptune-dark-blue;
+	}
 }
 
-div#guidance {
+.Sideblock {
 	.Content {
 		background-color: @neptune-dark-blue;
 		// border: 1px solid #aaa;
 		box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
 		color: white;
-		margin-top: 32px;
+		margin-top: 34px;
 		margin-right: 20px;
 		h2 {
 			padding: 5px 15px;
@@ -45,10 +49,11 @@ div#guidance {
 			li {
 				.ListItemBox;
 				h3 {
+					font-size: 1.5em;
 					margin: 0;
 					padding: 10px 15px;
 				}
-				p {
+				div {
 					display: none;
 					padding: 10px 15px;
 				}
@@ -58,4 +63,8 @@ div#guidance {
 			}
 		}
 	}
+}
+
+div#founders {
+	margin-bottom: 50px;
 }

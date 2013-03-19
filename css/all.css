@@ -1,0 +1,493 @@
+/***** Fonts & Colors *****/
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+@font-face {
+  font-family: webTune;
+  src: url('../fonts/webtune.ttf') format('truetype'), url('../fonts/webtune.eot') format('eot'), url('../fonts/webtune.woff') format('woff'), url('../fonts/webtune.svg') format('svg');
+  font-weight: 400;
+}
+
+/***** Main Styles *****/
+body {
+  background-image: url('../images/dust.png');
+  font-family: 'Oxygen' !important;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+}
+div#spinnerBase {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.LastBlockBeforeFooter {
+  margin-bottom: 40px;
+}
+a:hover {
+  color: #20c0f1;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Quote {
+  margin-top: 36px;
+}
+.Quote .QuoteText {
+  color: #f3660f;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin-right: 10px;
+}
+.Quote .QuoteText:before {
+  content: open-quote;
+  display: inline-block;
+  font-size: 1em;
+}
+.Quote .QuoteText:after {
+  content: close-quote;
+  font-size: 1em;
+}
+.Quote .QuoteAuthor {
+  color: #777777;
+  font-style: italic;
+}
+.Quote .QuoteAuthor:before {
+  content: "\2013\0020";
+}
+footer {
+  background: url('../images/dust.png');
+  bottom: 0px;
+  box-shadow: 0 -6px 6px -7px #000000;
+  font-size: 1.2em;
+  height: 40px;
+  padding: 15px auto;
+  position: fixed;
+}
+footer div#footerLinks {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+footer div#footerLinks ul {
+  list-style: none;
+  margin-left: 10%;
+}
+footer div#footerLinks ul li {
+  display: inline-block;
+  float: left;
+  margin-right: 7%;
+  color: #0f7491;
+}
+footer div#footerLinks ul li:hover {
+  color: #20c0f1;
+  cursor: pointer;
+  text-decoration: none;
+}
+footer div#footerLinks ul li.CurrentNav {
+  color: #f3660f;
+}
+footer div#copyright {
+  color: #777777;
+  font-size: 0.8em;
+  margin-top: 12px;
+  text-align: right;
+}
+footer div#copyright p {
+  margin-right: 10%;
+}
+
+/***** Home Styles *****/
+body {
+  background-image: url('../images/declaration-light.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+div#mantra {
+  background: transparent;
+  padding-top: 72px;
+  padding-bottom: 32px;
+  z-index: 1;
+}
+div#mantra div#logo {
+  text-align: center;
+}
+div#mantra div#logo img {
+  height: 72px;
+}
+@media (max-width: 480px) {
+  div#mantra div#logo img {
+    height: auto;
+    width: 240px;
+  }
+}
+div#mantra .Tagline {
+  font-size: 1.7em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 12px 0 24px 0;
+  text-align: center;
+}
+div#mantra p#description {
+  color: #333333;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.25em;
+  padding: 0 13%;
+  text-align: center;
+  text-shadow: 2px 2px 2px white;
+}
+@media (max-width: 480px) {
+  div#mantra p#description {
+    font-size: 1.3em;
+    line-height: 1.1em;
+  }
+}
+div#mantra div#musicians {
+  margin-top: 28px;
+  margin-left: 28px;
+  margin-right: 28px;
+  text-align: center;
+}
+div#forArtists {
+  background-color: #0f7491;
+  color: white;
+  padding-bottom: 20px;
+}
+div#forArtists .Content {
+  margin: 28px;
+}
+div#forConsumers {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 20px;
+}
+div#forConsumers .Content {
+  margin: 28px;
+}
+div#signup {
+  background-color: #480057;
+  color: white;
+  text-align: center;
+}
+div#signup .Content {
+  display: inline-block;
+}
+div#signup .Content p#signupResult {
+  font-size: 1.25em;
+  margin: 28px;
+}
+div#signup .Content div#stayTunedText {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-right: 20px;
+  text-align: center;
+  width: 220px;
+}
+div#signup .Content div#stayTunedText h3 {
+  margin-bottom: 0;
+}
+div#signup .Content div#stayTunedText p {
+  margin-bottom: 20px;
+}
+div#signup .Content div#stayTunedText .FeedbackBtn a {
+  color: #480057;
+}
+div#signup .Content div#stayTunedText .FeedbackBtn a:hover {
+  text-decoration: none;
+}
+div#signup .Content div#signupForm {
+  display: inline-block;
+  margin-top: 16px;
+}
+div#signup .Content div#signupForm input#fname {
+  width: 200px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#fname {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm input#lname {
+  width: 200px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#lname {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm input#email {
+  width: 418px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm input#email {
+    display: block;
+    width: 180px;
+  }
+}
+div#signup .Content div#signupForm div#signupButton {
+  color: #f3660f;
+  font-weight: bold;
+  width: 406px;
+}
+@media (max-width: 480px) {
+  div#signup .Content div#signupForm div#signupButton {
+    width: 168px;
+  }
+}
+
+/***** Story Styles *****/
+div#storyHeader {
+  background-image: url('../images/creativity.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 300px;
+}
+@media (max-width: 450px) {
+  div#storyHeader {
+    display: none;
+  }
+}
+div#storyHeader h1 {
+  color: white;
+  right: 25px;
+  font-size: 3.5em;
+  position: absolute;
+  text-align: right;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.5);
+  top: 200px;
+}
+div#story {
+  margin-bottom: 40px;
+  padding: 28px;
+}
+div#story a {
+  color: #0f7491;
+}
+.Sideblock .Content {
+  background-color: #0f7491;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-top: 34px;
+  margin-right: 20px;
+}
+.Sideblock .Content h2 {
+  padding: 5px 15px;
+}
+.Sideblock .Content .ListItemBox {
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+.Sideblock .Content ul {
+  list-style: none;
+  margin-left: 0;
+}
+.Sideblock .Content ul li {
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+.Sideblock .Content ul li h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 10px 15px;
+}
+.Sideblock .Content ul li div {
+  display: none;
+  padding: 10px 15px;
+}
+.Sideblock .Content ul li:hover {
+  cursor: pointer;
+}
+div#founders {
+  margin-bottom: 50px;
+}
+
+/***** Jobs Styles *****/
+div#workHeader {
+  background-image: url('../images/work.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 300px;
+}
+@media (max-width: 450px) {
+  div#workHeader {
+    display: none;
+  }
+}
+div#workHeader h1 {
+  color: white;
+  right: 25px;
+  font-size: 3.5em;
+  position: absolute;
+  text-align: right;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.5);
+  top: 200px;
+}
+div#mission {
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+div#mission p {
+  color: #777777;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.1em;
+  margin-bottom: 28px;
+  padding: 0 15%;
+  text-align: center;
+}
+div#mission p#actionCall {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+div#broken div#workplace {
+  padding-left: 28px;
+}
+div#setting div#environment {
+  padding-left: 28px;
+}
+div#setting div#hubs {
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 5px 20px 5px 20px;
+  margin-top: 50px;
+  margin-right: 28px;
+}
+div#positions div#teamIntro {
+  margin: 28px;
+}
+div#positions div#positionsListBlock {
+  background-color: #0f7491;
+}
+div#positions div#positionsListBlock ul#positionsList {
+  color: white;
+  list-style: none;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+div#positions div#positionsListBlock ul#positionsList li.PositionEntryBorder {
+  border-bottom: 1px solid #eee;
+}
+div#positions div#positionsListBlock ul#positionsList li h3 {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails {
+  display: none;
+  padding: 10px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionReqs li {
+  margin-bottom: 8px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock {
+  margin-bottom: 36px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock h4 {
+  margin-bottom: 2px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock p {
+  margin-bottom: 4px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock a {
+  color: white;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .ApplyNowBlock a:hover {
+  color: #20c0f1;
+  text-decoration: none;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .SharePositionBlock {
+  background: url('../images/dust.png');
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: black;
+  padding: 10px;
+}
+div#positions div#positionsListBlock ul#positionsList li div.PositionDetails div.PositionApply .SharePositionBlock .ShareBlock {
+  margin-bottom: 6px;
+}
+
+/***** Contact Styles *****/
+div#contactIntro {
+  margin-top: 28px;
+  margin-right: 28px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+}
+div#contactInfo {
+  margin: 28px;
+  text-align: center;
+}
+div#contactInfo .ContactBox {
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  height: 176px;
+  margin-bottom: 18px;
+  padding: 10px;
+}
+div#contactInfo .ContactBox h2 {
+  font-size: 1.5em;
+}
+div#contactInfo .ContactBox p {
+  margin-bottom: 4px;
+}
+div#contactInfo .ContactBox p.AddressLine1,
+div#contactInfo .ContactBox p.AddressLine2 {
+  font-weight: bold;
+}
+div#contactInfo .ContactBox p .ContactIcon {
+  color: #f3660f;
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox p#emailContact:before {
+  content: 'e';
+  color: #f3660f;
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox p#fbContact:before {
+  content: 'f';
+  color: #f3660f;
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox p#twitterContact:before {
+  content: 't';
+  color: #f3660f;
+  font-family: 'webTune';
+  margin-right: 8px;
+}
+div#contactInfo .ContactBox a {
+  color: black;
+}
+div#contactInfo .ContactBox a:hover {
+  color: #20c0f1;
+  text-decoration: none;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock {
+  text-align: center;
+  width: 100%;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock .FeedbackBtn {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+div#contactInfo .ContactBox #feedbackButtonBlock .FeedbackBtn a:hover {
+  color: black;
+}
+div#insetLogo {
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  opacity: 0.25;
+  width: 328px;
+}

@@ -1,8 +1,17 @@
 @import url('colors.less');
 
+body {
+	background-image: url('../images/declaration-light.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	// background-size: 100% auto;
+}
+
 div#mantra {
-	margin-top: 72px;
-	margin-bottom: 32px;
+	background: transparent;
+	padding-top: 72px;
+	padding-bottom: 32px;
+	z-index: 1;
 	div#logo {
 		text-align: center;
 		img {
@@ -14,19 +23,20 @@ div#mantra {
 		}
 	}
 	.Tagline {
-		font-size: 1.75em;
+		font-size: 1.7em;
 		font-weight: bold;
 		line-height: 1.25em;
-		margin: 32px;
+		margin: 12px 0 24px 0;
 		text-align: center;
 	}
 	p#description {
-		color: @light-grey;
-		font-size: 1.75em;
+		color: @dark-grey;
+		font-size: 1.25em;
 		font-weight: bold;
 		line-height: 1.25em;
 		padding: 0 13%;
 		text-align: center;
+		text-shadow: 2px 2px 2px white;
 		@media (max-width: 480px) {
 			font-size: 1.3em;
 			line-height: 1.1em;
@@ -50,7 +60,8 @@ div#forArtists {
 }
 
 div#forConsumers {
-	margin-bottom: 20px;
+	background-color: rgba(255, 255, 255, 0.75);
+	padding-bottom: 20px;
 	.Content {
 		margin: 28px;
 	}
@@ -62,6 +73,10 @@ div#signup {
 	text-align: center;
 	.Content {
 		display: inline-block;
+		p#signupResult {
+			font-size: 1.25em;
+			margin: 28px;
+		}
 		div#stayTunedText {
 			display: inline-block;
 			margin-bottom: 24px;

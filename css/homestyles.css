@@ -1,6 +1,13 @@
+body {
+  background-image: url('../images/declaration-light.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
 div#mantra {
-  margin-top: 72px;
-  margin-bottom: 32px;
+  background: transparent;
+  padding-top: 72px;
+  padding-bottom: 32px;
+  z-index: 1;
 }
 div#mantra div#logo {
   text-align: center;
@@ -15,19 +22,20 @@ div#mantra div#logo img {
   }
 }
 div#mantra .Tagline {
-  font-size: 1.75em;
+  font-size: 1.7em;
   font-weight: bold;
   line-height: 1.25em;
-  margin: 32px;
+  margin: 12px 0 24px 0;
   text-align: center;
 }
 div#mantra p#description {
-  color: #aaaaaa;
-  font-size: 1.75em;
+  color: #333333;
+  font-size: 1.25em;
   font-weight: bold;
   line-height: 1.25em;
   padding: 0 13%;
   text-align: center;
+  text-shadow: 2px 2px 2px white;
 }
 @media (max-width: 480px) {
   div#mantra p#description {
@@ -50,7 +58,8 @@ div#forArtists .Content {
   margin: 28px;
 }
 div#forConsumers {
-  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 20px;
 }
 div#forConsumers .Content {
   margin: 28px;
@@ -62,6 +71,10 @@ div#signup {
 }
 div#signup .Content {
   display: inline-block;
+}
+div#signup .Content p#signupResult {
+  font-size: 1.25em;
+  margin: 28px;
 }
 div#signup .Content div#stayTunedText {
   display: inline-block;

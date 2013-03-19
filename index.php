@@ -13,7 +13,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>nepTune</title>
+	<title>nepTune Music</title>
 	<meta property="fb:admins" content="100001324728942" />
 	<meta property="og:title" content="nepTune Jobs" />
 	<meta property="og:type" content="company" />
@@ -23,16 +23,12 @@
 	<meta property="fb:admins" content="100001324728942" />
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
-	<link rel="stylesheet" href="css/mainstyles.css" type="text/css" />
-	<link rel="stylesheet" href="css/homestyles.css" type="text/css" />
-	<link rel="stylesheet" href="css/storystyles.css" type="text/css" />
-	<link rel="stylesheet" href="css/jobsstyles.css" type="text/css" />
-	<link rel="stylesheet" href="css/contactstyles.css" type="text/css" />
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/mainscripts.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="screen" /> <!-- Includes responsive code -->
+	<link rel="stylesheet" href="css/all.css" type="text/css" />
+	<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+	<!-- <script src="js/mainscripts.js"></script> -->
 	<script src="js/activity-indicator.js"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {	// Load Retina images
 			if (window.devicePixelRatio > 1.5) {
@@ -56,10 +52,59 @@
 			}
 		});
 	</script>
+	<script type="text/javascript">	// For home page parallax
+		$(document).ready(function() {
+			var ParallaxSpeedFactor = 3;
+			$(window).scroll(function() {
+				var yPos = -($(window).scrollTop() / ParallaxSpeedFactor);
+				console.log("yPos: " + yPos);
+				var coords = '50% ' + yPos + 'px';
+				console.log('coords: ' + coords);
+				$('body').css('backgroundPosition', coords);
+			});
+		});
+	</script>
+	<script type="text/javascript">	// New user signup AJAX
+		function newUserSignup() {
+			var fnameVal = $("#fname").val();
+			var lnameVal = $("#lname").val();
+			var emailVal = document.getElementById("email").value;
+			var userData = {
+				fname: fnameVal,
+				lname: lnameVal,
+				email: emailVal
+			};
+			$.ajax({
+				type: "POST",
+				url: "useremailsignup.php",
+				dateType: 'json',
+				data: {fname: fnameVal, lname: lnameVal, email: emailVal}
+			}).done(function(reply) {
+				if (reply.indexOf("Error") == -1) {
+					var outputString = "<p id='signupResult' style='font-size: 1.25em; padding: 28px;'>" + reply + ", thanks for your interest! We hope you're as excited about nepTune as we are. If you have any questions, please send <a href='mailto:future@neptunemusic.co'>send us a message</a>!</p>";
+					$("#signup").html(outputString);
+				}
+				else {
+					var outputString = "<p id='signupResult' style='font-size: 1.25em; padding: 28px;'>There was an error&mdash;we'll get on fixing the issue as soon as we can!<br />Meanwhile, please try again, or <a href='mailto:team@neptunemusic.co'>send us a message</a>.</p>"
+					$("#signup").html(outputString);
+				}
+			});
+		}
+	</script>
 	<script type="text/javascript">	// For stories page
 		function showPrinciples(tag) {
 			for (var i = 0; i < 3; i++) {
 				var selector = "#guidance" + i;
+				if (i == tag)
+					$(selector).slideDown(400);
+				else
+					$(selector).slideUp(400);
+			}
+		}
+		function showFounders(tag) {
+			console.log("Show founders");
+			for (var i = 0; i < 2; i++) {
+				var selector = '#founders' + i;
 				if (i == tag)
 					$(selector).slideDown(400);
 				else
@@ -139,6 +184,10 @@
 			window.location.hash = index;
 			$("#spinnerBase").activity();
 			$("#bodyContent").css('opacity', '0');
+			if (index == 0) {
+				$("body").css('background-image', "url('../images/declaration-light.jpg')");
+				$("body").css('background-repeat', 'repeat-y');
+			}
 			var navLinkID = "navLink" + window.location.hash.substring(1);
 			$(navLinkID).removeClass('CurrentNav');
 			makeAJAXRequest(index);
@@ -156,6 +205,12 @@
 				moveLeft = 0;
 				moveRight = 0;
 			}
+			
+			if (index != 0) {
+				$("body").css('background-image', "url('../images/dust.png')");
+				$("body").css('background-repeat', 'repeat');
+			}
+				
 			if (animate && index != window.location.hash.substring(1)) {
 				if ($(".HeroHeader")[0]) {
 					$(".HeroHeader").animate({
@@ -181,9 +236,9 @@
 	</script>
 	<div class="row-fluid" id="mantra">
 		<div id="logo"><img src="images/logo.png" alt="nepTune Music" height="55px" /></div>
-		<p class="Tagline">Discover, enjoy and share great music from around the world</p>
-		<p id="description">nepTune is a place for artists and their fans to build trusting, personal relationships. The existing music industry marginalizes music and doesn’t give enough back to the artists. nepTune helps artists directly, through a supportive community and painless environment that encourages fans to support the music they love.</p>
-		<div class="Quote" id="musicians">
+		<p class="Tagline">Every artist, every song, everywhere.</p>
+		<p id="description">The existing music industry marginalizes music and doesn’t give enough back to the artists. nepTune is a supportive community for artists to create great works and motivates fans to support the music they love.</p>
+		<div class="Quote" id="musicians" style="display: none">
 			<p class="QuoteText">We're not creating celebrities. We're creating musicians.</p>
 			<p class="QuoteAuthor">Feifan Zhou, Co-Founder</p>
 		</div>
@@ -193,7 +248,7 @@
 			<h1>For artists</h1>
 			<div class="span6 FeatureBlock">
 				<div class="Feature">
-					<h2>Built for artists</h2>
+					<h2>Built for you</h2>
 					<p>Music isn't just about individual songs. You are a talented individual with stories to share, and nepTune focuses on you as an artist&mdash;a creator of awesome music.</p>
 				</div>
 				<div class="Feature">
@@ -211,7 +266,7 @@
 			</div>
 			<div class="span5 FeatureBlock">
 				<div class="Feature">
-					<h2>Rapid sharing</h2>
+					<h2>Sharing at the speed of sound</h2>
 					<p>nepTune makes it incredibly easy for listeners and artists alike to share songs they like with each other. This is much more effective than being bombarded by mass-manufactured generic songs everywhere you go. This means that people will take the time to appreciate your work and gets your music out in front of many more people who genuinely love it.</p>
 				</div>
 				<div class="Feature">

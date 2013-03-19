@@ -20,36 +20,44 @@ div#storyHeader h1 {
   top: 200px;
 }
 div#story {
+  margin-bottom: 40px;
   padding: 28px;
 }
-div#guidance .Content {
+div#story a {
+  color: #0f7491;
+}
+.Sideblock .Content {
   background-color: #0f7491;
   box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
   color: white;
-  margin-top: 32px;
+  margin-top: 34px;
   margin-right: 20px;
 }
-div#guidance .Content h2 {
+.Sideblock .Content h2 {
   padding: 5px 15px;
 }
-div#guidance .Content .ListItemBox {
+.Sideblock .Content .ListItemBox {
   border-top: 2px solid rgba(255, 255, 255, 0.25);
 }
-div#guidance .Content ul {
+.Sideblock .Content ul {
   list-style: none;
   margin-left: 0;
 }
-div#guidance .Content ul li {
+.Sideblock .Content ul li {
   border-top: 2px solid rgba(255, 255, 255, 0.25);
 }
-div#guidance .Content ul li h3 {
+.Sideblock .Content ul li h3 {
+  font-size: 1.5em;
   margin: 0;
   padding: 10px 15px;
 }
-div#guidance .Content ul li p {
+.Sideblock .Content ul li div {
   display: none;
   padding: 10px 15px;
 }
-div#guidance .Content ul li:hover {
+.Sideblock .Content ul li:hover {
   cursor: pointer;
+}
+div#founders {
+  margin-bottom: 50px;
 }
