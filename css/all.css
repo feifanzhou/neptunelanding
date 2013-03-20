@@ -244,7 +244,7 @@ div#signup .Content div#signupForm div#signupButton {
 /***** Story Styles *****/
 div#storyHeader {
   background-image: url('../images/creativity.jpg');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 300px;
@@ -309,7 +309,7 @@ div#founders {
 /***** Jobs Styles *****/
 div#workHeader {
   background-image: url('../images/work.jpg');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 300px;

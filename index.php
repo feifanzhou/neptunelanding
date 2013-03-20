@@ -61,6 +61,10 @@
 				var coords = '50% ' + yPos + 'px';
 				console.log('coords: ' + coords);
 				$('body').css('backgroundPosition', coords);
+				if ($('div#storyHeader')[0])
+					$('div#storyHeader').css('backgroundPosition', coords);
+				if ($('div#workHeader')[0])
+					$('div#workHeader').css('backgroundPosition', coords);
 			});
 		});
 	</script>
@@ -237,7 +241,7 @@
 	<div class="row-fluid" id="mantra">
 		<div id="logo"><img src="images/logo.png" alt="nepTune Music" height="55px" /></div>
 		<p class="Tagline">Every artist, every song, everywhere.</p>
-		<p id="description">The existing music industry marginalizes music and doesn’t give enough back to the artists. nepTune is a supportive community for artists to create great works and motivates fans to support the music they love.</p>
+		<p id="description">The existing music industry marginalizes music and doesn’t give enough back to the artists. nepTune is the first music platform that focuses on the intersection between artists and consumers.</p>
 		<div class="Quote" id="musicians" style="display: none">
 			<p class="QuoteText">We're not creating celebrities. We're creating musicians.</p>
 			<p class="QuoteAuthor">Feifan Zhou, Co-Founder</p>
@@ -260,14 +264,14 @@
 					<p>Your music deserves better than a page that looks like a newspaper article. nepTune gives you a beautiful home for you and your fans and makes it incredibly easy for fans to find what they're searching for.</p>
 				</div>
 				<div class="Feature">
-					<h2>Fair, equal promotion</h2>
-					<p>Labels shouldn't have the right to decide what music fans listen to. nepTune provides an equal opportunity for every artist to get your music out in front of people and discover success. Along the way, you'll build a loyal fanbase who love you and your music. Doesn't that sound better than having a guy in a tacky suit decide what people listen to?</p>
+					<h2>Fair promotion</h2>
+					<p>Labels shouldn't have the right to decide what music fans listen to. nepTune gives every artist an opportunity to get their music out in front of people and discover success. Along the way, you'll build a loyal fanbase who love you and your music. Doesn't that sound better than having a guy in a tacky suit decide what people listen to?</p>
 				</div>
 			</div>
 			<div class="span5 FeatureBlock">
 				<div class="Feature">
 					<h2>Sharing at the speed of sound</h2>
-					<p>nepTune makes it incredibly easy for listeners and artists alike to share songs they like with each other. This is much more effective than being bombarded by mass-manufactured generic songs everywhere you go. This means that people will take the time to appreciate your work and gets your music out in front of many more people who genuinely love it.</p>
+					<p>nepTune makes it incredibly easy for listeners and artists alike to share songs they like with each other. Sharing is much more effective than being bombarded by generic songs everywhere you go. This means that people will take the time to appreciate your work and gets your music out in front of many more people who genuinely love it.</p>
 				</div>
 				<div class="Feature">
 					<h2>Crowd-sourced talent</h2>
@@ -314,7 +318,7 @@
 				<div id="stayTunedText">
 				<h3>Stay tuned</h3>
 				<p>Welcome to the future of music.</p>
-				<div class="btn FeedbackBtn" id="consumerFeedbackButton"><a href="http://bit.ly/nepTuneFeedback">We want your feedback!</a></div>
+				<div class="btn FeedbackBtn" id="consumerFeedbackButton"><a href="http://bit.ly/nepTuneSurvey">We want your feedback!</a></div>
 			</div>
 			<div id="signupForm">
 				<form method="POST" action="useremailsignup.php">
