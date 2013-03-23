@@ -57,9 +57,7 @@
 			var ParallaxSpeedFactor = 3;
 			$(window).scroll(function() {
 				var yPos = -($(window).scrollTop() / ParallaxSpeedFactor);
-				console.log("yPos: " + yPos);
 				var coords = '50% ' + yPos + 'px';
-				console.log('coords: ' + coords);
 				$('body').css('backgroundPosition', coords);
 				if ($('div#storyHeader')[0])
 					$('div#storyHeader').css('backgroundPosition', coords);
