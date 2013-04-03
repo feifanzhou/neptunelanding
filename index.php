@@ -13,7 +13,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>nepTune Music</title>
+	<title>nepTune | The Future of Music</title>
 	<meta property="fb:admins" content="100001324728942" />
 	<meta property="og:title" content="nepTune Jobs" />
 	<meta property="og:type" content="company" />
@@ -66,8 +66,30 @@
 			});
 		});
 	</script>
-	<script type="text/javascript">	// New user signup AJAX
+	<script type="text/javascript">	// Signup form and AJAX
+		function isValidEmail(email) {
+		    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+		    return pattern.test(email);
+		}
+		function validateSignup() {
+			var fNameV = false;
+			var lNameV = false;
+			var emailV = false;
+			if ($("#fname").val().length > 0)
+				fNameV = true;
+			if ($("#lname").val().length > 0)
+				lNameV = true;
+			if (($("#email").val().length > 0) && isValidEmail($("#email").val()))
+				emailV = true;
+			if (fNameV && lNameV && emailV)
+				$("#signupButton").removeClass('disabled');
+			else
+				$("#signupButton").addClass('disabled');
+		}
 		function newUserSignup() {
+			if ($("signupButton").hasClass('disabled'))
+				return false;
+				
 			var fnameVal = $("#fname").val();
 			var lnameVal = $("#lname").val();
 			var emailVal = document.getElementById("email").value;
@@ -291,7 +313,7 @@
 					<p>nepTune fosters an artistic environment where artists are free to explore creative ideas and create great music. This means that you get pure creativity, not an autotuned, mass-produced mess.</p>
 				</div>
 				<div class="Feature">
-					<h2>Sounds from around the world</h2>
+					<h2>A World of Music</h2>
 					<p>nepTune uses the freedom of the internet to spread music around the world. Whether you like African pop or the traditional sounds of Southeast Asia, nepTune brings all of those sounds together in one place for your listening pleasure.</p>
 				</div>
 				<div class="Feature">
@@ -321,13 +343,13 @@
 			<div id="signupForm">
 				<form method="POST" action="useremailsignup.php">
 					<div id="signupNameBlock">
-						<input type="text" name="fname" id="fname" placeholder="First name" />
-						<input type="text" name="lname" id="lname" placeholder="Last name" />
+						<input type="text" name="fname" id="fname" placeholder="First name" onkeydown="validateSignup()" required="required" />
+						<input type="text" name="lname" id="lname" placeholder="Last name" onkeydown="validateSignup()" required="required" />
 					</div>
 					<div id="signupEmailBlock">
-						<input type="email" name="email" id="email" placeholder="Email" />
+						<input type="email" name="email" id="email" placeholder="Email" onkeydown="validateSignup()" required="required" />
 					</div>
-					<div class="btn" id="signupButton" onclick="newUserSignup()" ><span>Sign up!</span></div>
+					<div class="btn disabled" id="signupButton" onclick="newUserSignup()" ><span>Sign up!</span></div>
 				</form>
 			</div>
 		</div>

@@ -56,7 +56,7 @@
 				<p>nepTune fosters an artistic environment where artists are free to explore creative ideas and create great music. This means that you get pure creativity, not an autotuned, mass-produced mess.</p>
 			</div>
 			<div class="Feature">
-				<h2>Sounds from around the world</h2>
+				<h2>A World of Music</h2>
 				<p>nepTune uses the freedom of the internet to spread music around the world. Whether you like African pop or the traditional sounds of Southeast Asia, nepTune brings all of those sounds together in one place for your listening pleasure.</p>
 			</div>
 			<div class="Feature">
@@ -86,13 +86,13 @@
 		<div id="signupForm">
 			<form method="POST" action="useremailsignup.php">
 				<div id="signupNameBlock">
-					<input type="text" name="fname" id="fname" placeholder="First name" />
-					<input type="text" name="lname" id="lname" placeholder="Last name" />
+					<input type="text" name="fname" id="fname" placeholder="First name" onkeydown="validateSignup()" required="required" />
+					<input type="text" name="lname" id="lname" placeholder="Last name" onkeydown="validateSignup()" required="required" />
 				</div>
 				<div id="signupEmailBlock">
-					<input type="email" name="email" id="email" placeholder="Email" />
+					<input type="email" name="email" id="email" placeholder="Email" onkeydown="validateSignup()" required="required" />
 				</div>
-				<div class="btn" id="signupButton" onclick="newUserSignup()" ><span>Sign up!</span></div>
+				<div class="btn disabled" id="signupButton" onclick="newUserSignup()" ><span>Sign up!</span></div>
 			</form>
 		</div>
 	</div>
