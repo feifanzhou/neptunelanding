@@ -126,7 +126,6 @@
 			}
 		}
 		function showFounders(tag) {
-			console.log("Show founders");
 			for (var i = 0; i < 2; i++) {
 				var selector = '#founders' + i;
 				if (i == tag)
@@ -138,7 +137,18 @@
 	</script>
 	<script type="text/javascript">	// For jobs page
 		function showPositionDetails(tag) {
-			var currID = "#positionInfo" + tag;
+			for (var i = 0; i < 3; i++) {
+				var currID = "#positionInfo" + i;
+				if (i == tag) {
+					$(currID).slideDown(400);
+					$('html, body').animate({
+						scrollTop: $(currID).offset().top
+					}, 600);
+				}
+				else
+					$(currID).slideUp(400);
+			}
+			/* var currID = "#positionInfo" + tag;
 			var otherTag
 			if (tag == 0)
 				otherTag = 1
@@ -149,7 +159,7 @@
 			$(currID).slideDown(400);
 			$('html, body').animate({
 				scrollTop: $(currID).offset().top
-			}, 600);
+			}, 600); */
 		}
 	</script>
 </head>
