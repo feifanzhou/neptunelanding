@@ -86,6 +86,15 @@
 			else
 				$("#signupButton").addClass('disabled');
 		}
+		function isCleanName(name) {
+			var terms = ["cock", "cunt", "faggot", "fuck", "fuq", "hoez", "jamaal", "jamal", "jizz", "nigger", "nigga", "suck", "sucker", "swaqq"];
+			for (var i = 0; i < terms.length; i++) {
+				var term = name.toLowerCase();
+				if (term.indexOf(terms[i]) != -1)	// Term found
+					return false;
+			}
+			return true;
+		}
 		function newUserSignup() {
 			if ($("signupButton").hasClass('disabled'))
 				return false;
@@ -93,6 +102,14 @@
 			var fnameVal = $("#fname").val();
 			var lnameVal = $("#lname").val();
 			var emailVal = document.getElementById("email").value;
+			if ((!isCleanName(fnameVal)) || (!isCleanName(lnameVal))) {
+				alert("That's not a valid name.");
+				return;
+			}
+			if (!isCleanName(emailVal)) {
+				alert("That's probably not a valid email.");
+				return;
+			}
 			var userData = {
 				fname: fnameVal,
 				lname: lnameVal,
